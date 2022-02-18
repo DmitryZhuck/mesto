@@ -21,6 +21,7 @@
 
 ### **_GitHub Pages link_**
 
+  https://dmitryzhuck.github.io/mesto/
 -
 -
 -
@@ -28,4 +29,4 @@
 
 ### **_Планы по доработке проекта:_**
 
-![Жизнь...](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.meme-arsenal.com%2Fcreate%2Fmeme%2F1373025&psig=AOvVaw0AEzIJ0OW6dCdnwERYBnzu&ust=1645288288567000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC07tPWifYCFQAAAAAdAAAAABAY "-")
+![Жизнь...](https://cs11.pikabu.ru/post_img/2018/06/16/11/1529175390179468580.jpg "-")
