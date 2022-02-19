@@ -52,7 +52,6 @@
   // функция добавления события по клику на каждую кнопку по id
   function addEventHearthButton(index) {
     hearthIconCollection[index].addEventListener("click", () => {
-      // условие для добавления и удаления класса - toggle
       if (
         hearthIconCollection[index].classList.contains(
           "element__btn_type_disactive"
@@ -72,9 +71,7 @@
       }
     });
   }
-
-  // пробегаемся в цикле по коллекции hearthIconCollection и вызываем ф-ию
-  // addEventHearthButton в которую передаем индекс кнопки (id)
+  
   for (let index = 0; index < hearthIconCollection.length; index++) {
     addEventHearthButton(index);
   }
