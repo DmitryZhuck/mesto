@@ -5,6 +5,11 @@
 
   color: #fff;
   margin: 16px 0 0 0;
+
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 520px) {
@@ -12,5 +17,16 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+
+    margin: 14px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .profile__profession {
+    max-width: 190px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

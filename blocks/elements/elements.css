@@ -19,9 +19,9 @@
   .elements {
     max-width: 720px;
 
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(282px, max-content));
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* grid-auto-rows: 1fr 1fr; */
 
     justify-items: center;
     justify-content: center;
@@ -33,15 +33,22 @@
 
 @media screen and (max-width: 595px) {
   .elements {
-    max-width: 590px;
+    /* max-width: 590px;
     padding: 0;
 
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
 
     justify-items: center;
-    justify-content: center;
-
+    justify-content: center; */
+    padding: 0;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .elements {
+    max-width: 100%;
+    margin: 0 19px;
   }
 }

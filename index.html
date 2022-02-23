@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="pages/index.css" />
-    <title>mesto</title>
+    <title>место</title>
   </head>
   <body>
-    <div class="container">
-      <div class="page">
-        <header class="header">
-          <img
-            class="header__logo"
-            src="images/Vector.svg"
-            alt="логотип_сайта_МЕСТО"
-          />
-          <hr class="header__underline" />
-        </header>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="images/Vector.svg"
+          alt="логотип_сайта_МЕСТО"
+        />
+      </header>
 
-        <main class="profile">
+      <main class="main">
+        <div class="profile">
           <div class="profile__info">
             <img
               class="profile__avatar"
@@ -27,7 +26,7 @@
             />
             <div class="profile__persone">
               <div class="profile__about">
-                <p class="profile__name">Жак-Ив Кусто</p>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <button class="profile__btn">
                   <img
                     class="profile__btn profile__btn_type_img"
@@ -46,7 +45,7 @@
               alt="кнопка_добавления"
             />
           </button>
-        </main>
+        </div>
 
         <section class="elements">
           <div class="element">
@@ -56,7 +55,7 @@
               alt="фото_карачаево"
             />
             <div class="element__caption">
-              <p class="element__text">Карачаевск</p>
+              <h2 class="element__text">Карачаевск</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
@@ -68,7 +67,7 @@
               alt="фото_гора_Эльбрус"
             />
             <div class="element__caption">
-              <p class="element__text">Гора Эльбрус</p>
+              <h2 class="element__text">Гора Эльбрус</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
@@ -80,7 +79,7 @@
               alt="фото_Домбай"
             />
             <div class="element__caption">
-              <p class="element__text">Домбай</p>
+              <h2 class="element__text">Домбай</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
@@ -92,7 +91,7 @@
               alt="фото_Парипуэйра"
             />
             <div class="element__caption">
-              <p class="element__text">Парипуэйра</p>
+              <h2 class="element__text">Парипуэйра</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
@@ -104,7 +103,7 @@
               alt="фото_Нью-Йорк"
             />
             <div class="element__caption">
-              <p class="element__text">Нью-Йорк</p>
+              <h2 class="element__text">Нью-Йорк</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
@@ -116,35 +115,41 @@
               alt="фото_остров_Харрис"
             />
             <div class="element__caption">
-              <p class="element__text">Остров Харрис</p>
+              <h2 class="element__text">Остров Харрис</h2>
               <button class="element__btn element__btn_type_disactive"></button>
             </div>
           </div>
         </section>
+      </main>
 
-        <footer class="footer">
-          <p class="footer__txt">© 2020 Mesto Russia</p>
-        </footer>
+      <footer class="footer">
+        <p class="footer__txt">&#169; 2020 Mesto Russia</p>
+      </footer>
 
-        <div class="popup">
-          <div class="popup__container">
-            <form class="popup__form">
-              <img
-                class="popup__close"
-                src="images/Close_Icon.svg"
-                alt="закрыть выпадающее окно"
-              />
-              <p class="popup__title">Редактировать профиль</p>
-              <input type="text" class="popup__input popup__input_type_name" />
-              <hr class="popup__underline" />
-              <input type="text" class="popup__input popup__input_type_job" />
-              <hr class="popup__underline" />
-              <button class="popup__save" type="submit">Сохранить</button>
-            </form>
-          </div>
+      <div class="popup">
+        <div class="popup__container">
+          <form class="popup__form" name="popup_send">
+            <img
+              class="popup__close"
+              src="images/Close_Icon.svg"
+              alt="закрыть выпадающее окно"
+            />
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input
+              type="text"
+              class="popup__input popup__input_type_name"
+              name="input_name"
+            />
+            <input
+              type="text"
+              class="popup__input popup__input_type_job"
+              name="input_job"
+            />
+            <button class="popup__save" type="submit">Сохранить</button>
+          </form>
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

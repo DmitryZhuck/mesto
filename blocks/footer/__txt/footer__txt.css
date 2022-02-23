@@ -7,3 +7,10 @@
   padding: 0;
   color: #545454;
 }
+
+@media screen and (max-width: 520px) {
+  .footer__txt {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
