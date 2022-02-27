@@ -2,22 +2,22 @@
   box-sizing: border-box;
 
   width: 430px;
-  height: 330px;
+  min-height: 330px;
   padding: 34px 36px 37px;
 
   background-color: #fff;
   border-radius: 10px;
 
-  position: absolute;
+  /* position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 @media screen and (max-width: 520px) {
   .popup__container {
     width: 282px;
-    height: 322px;
+    min-height: 322px;
     padding: 25px 22px;
   }
 }
