@@ -36,10 +36,12 @@ const togglePopupHandler = () => {
   popup.classList.toggle("popup_type_opened");
 };
 
-openEditProfile.addEventListener("click", togglePopupHandler);
-popupClose.addEventListener("click", togglePopupHandler);
+const handleOpen = () => {
+  togglePopupHandler();
 
-nameInput.value = userName.textContent;
+  nameInput.value = userName.textContent;
+  jobInput.value = userJob.textContent;
+};
 
 const submitForm = (event) => {
   event.preventDefault();
@@ -52,4 +54,5 @@ const submitForm = (event) => {
 
 popupForm.addEventListener("submit", submitForm);
 
-jobInput.value = userJob.textContent;
+popupClose.addEventListener("click", togglePopupHandler);
+openEditProfile.addEventListener("click", handleOpen);

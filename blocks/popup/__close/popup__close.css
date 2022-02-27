@@ -2,9 +2,9 @@
   width: 32px;
   height: 32px;
 
-  position: relative;
-  top: -74px;
-  left: 112%;
+  position: absolute;
+  top: -40px;
+  right: -40px;
 
   cursor: pointer;
   transition: 0.6s;
@@ -20,8 +20,7 @@
     width: 20px;
     height: 20px;
 
-    position: relative;
-    top: -65px;
-    left: 100%;
+    top: -36px;
+    right: 0;
   }
 }
