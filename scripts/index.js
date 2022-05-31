@@ -10,7 +10,7 @@ const userName = query(".profile__name");
 const jobInput = query(".popup__input_type_job");
 const userJob = query(".profile__profession");
 // LIKE
-const likeBtn = document.querySelectorAll(".element__btn");
+const likeBtn = document.querySelectorAll("#like-btn");
 const likeCard = (e) => {
   e.target.classList.toggle("element__btn_type_disactive");
   e.target.classList.toggle("element__btn_type_active");
@@ -54,7 +54,7 @@ const togglePopupCreateHandler = () => popupCreate.classList.toggle("popup_type_
 openCreate.addEventListener("click", togglePopupCreateHandler);
 closeCreate.addEventListener("click", togglePopupCreateHandler);
 
-let modalImg = document.querySelectorAll("#img-mod");
+let modalImg = document.querySelectorAll(".element__img");
 
 const createCardFunc = () => {
   const template = query("#template");
@@ -73,6 +73,7 @@ const createCardFunc = () => {
   templatePhoto.src = inputPlaceLink.value;
   templateText.textContent = inputPlaceName.value;
 
+  modalImg;
   popupFormCreate.reset();
   return templateElem;
 };
@@ -86,7 +87,7 @@ const cardCreateHandler = (e) => {
   togglePopupCreateHandler();
 
   // Вынести в функцию и вызвать здесь и внизу - этот цикл чтобы добавлялось к новой карточке
-  for (let element of elements.children) {
+  for (let element of modalImg) {
     element.addEventListener("click", (e) => handleOpenModal(e, element));
   }
 };
@@ -106,13 +107,12 @@ deleteButton.forEach((btn) => btn.addEventListener("click", removeElement));
 
 // ОТКРЫТИЕ КАРТИНОК ПО КЛИКУ
 const modal = query(".modal");
-// const modalBody = query(".modal__body");
 const modalClose = query(".modal__close"); //кнопка закрытия Х
 const modalOpenImg = query("#myImg");
 //картинки из Element, то на что жмем
 modal.style.opacity = 0;
 modal.style.visibility = "hidden";
-
+// скрыть/показать модальное окно
 const toggleModalHandler = () => {
   // console.dir(modal.style);
   if (modal.style.opacity === "0") {
@@ -125,24 +125,19 @@ const toggleModalHandler = () => {
     modal.style.visibility = "hidden";
   }
 };
-//закртыие картинки
-modalClose.addEventListener("click", toggleModalHandler); // по крестику
-//
+
+modalClose.addEventListener("click", toggleModalHandler); // закртыие картинкипо крестику
 const modalCaption = document.querySelector(".modal__caption"); // МОДАЛЬНАЯ ПОДПИСЬ
 const modalText = document.querySelectorAll(".element__text"); //ПОДПИСЬ У ФОТОГРАФИЙ
-const modalTextContent = modalText.forEach((txt) => {
-  modalCaption.textContent = txt.textContent;
-});
-
+const modalTextContent = modalText.forEach((txt) => (modalCaption.textContent = txt.textContent));
 // открытие картинки
 function handleOpenModal(e, element) {
   toggleModalHandler();
-  modalOpenImg.src = e.target.src;
+  modalOpenImg.src = element.children[1].src;
   modalCaption.textContent = element.children[2].children[0].innerHTML; // доступ к тексту в верстке
   // console.log("element", element);
   // console.log("element.children[2]", element.children[2]);
 }
-
 for (let element of elements.children) {
   element.addEventListener("click", (e) => handleOpenModal(e, element));
 }

@@ -46,5 +46,5 @@
 @import url(../blocks/modal/__body/modal__body.css);
 @import url(../blocks/modal/__content/modal__content.css);
 @import url(../blocks/modal/__close/modal__close.css);
-@import url(../blocks/modal/modal__disabled.css);
 @import url(../blocks/modal/__caption/modal__caption.css);
+@import url(../blocks/modal/_type/modal_type_opened.css);
