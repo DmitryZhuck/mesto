@@ -1,7 +1,5 @@
-.popup {
-  /* display: none; */
-  opacity: 0;
-  visibility: hidden;
+.popup__create {
+  display: none;
 
   position: fixed;
   top: 0;

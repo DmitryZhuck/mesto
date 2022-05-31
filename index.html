@@ -9,11 +9,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <img
-          class="header__logo"
-          src="images/Vector.svg"
-          alt="логотип_сайта_МЕСТО"
-        />
+        <img class="header__logo" src="images/Vector.svg" alt="логотип_сайта_МЕСТО" />
       </header>
 
       <main class="main">
@@ -21,11 +17,7 @@
           <!-- этот див помогает мне выровнять элементы на десктопе и на адаптиве,  -->
           <!-- без него верстка летит и он удобен для меня -->
           <div class="profile__info">
-            <img
-              class="profile__avatar"
-              src="images/profile-avatar.jpg"
-              alt="фотография_профиля"
-            />
+            <img class="profile__avatar" src="images/profile-avatar.jpg" alt="фотография_профиля" />
             <div class="profile__persone">
               <div class="profile__about">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -39,94 +31,68 @@
 
         <section class="elements">
           <div class="element">
-            <img
-              class="element__img"
-              src="images/karach.jpg"
-              alt="фото_карачаево"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/karach.jpg" alt="фото_карачаево" />
             <div class="element__caption">
               <h2 class="element__text">Карачаевск</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
           </div>
 
           <div class="element">
-            <img
-              class="element__img"
-              src="images/elbrus_mountain.jpg"
-              alt="фото_гора_Эльбрус"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/elbrus_mountain.jpg" alt="фото_гора_Эльбрус" />
             <div class="element__caption">
               <h2 class="element__text">Гора Эльбрус</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
           </div>
 
           <div class="element">
-            <img
-              class="element__img"
-              src="images/dombai.jpg"
-              alt="фото_Домбай"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/dombai.jpg" alt="фото_Домбай" />
             <div class="element__caption">
               <h2 class="element__text">Домбай</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
           </div>
 
           <div class="element">
-            <img
-              class="element__img"
-              src="images/Paripueira.jpg"
-              alt="фото_Парипуэйра"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/Paripueira.jpg" alt="фото_Парипуэйра" />
             <div class="element__caption">
               <h2 class="element__text">Парипуэйра</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
           </div>
 
           <div class="element">
-            <img
-              class="element__img"
-              src="images/NewYork.jpg"
-              alt="фото_Нью-Йорк"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/NewYork.jpg" alt="фото_Нью-Йорк" />
             <div class="element__caption">
               <h2 class="element__text">Нью-Йорк</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
           </div>
 
           <div class="element">
-            <img
-              class="element__img"
-              src="images/harris_island.jpg"
-              alt="фото_остров_Харрис"
-            />
+            <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+            <img class="element__img" id="img-mod" src="images/harris_island.jpg" alt="фото_остров_Харрис" />
             <div class="element__caption">
               <h2 class="element__text">Остров Харрис</h2>
-              <button
-                class="element__btn element__btn_type_disactive"
-                type="button"
-              ></button>
+              <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
             </div>
-          </div>
+
+          <template id="template">
+            <div class="element">
+              <button class="element__btn_type_delete" type="button" id="delete-btn"></button>
+              <img class="element__img" id="img-mod" src="" />
+              <div class="element__caption">
+                <h2 class="element__text"></h2>
+                <button class="element__btn element__btn_type_disactive" type="button" id="like-btn"></button>
+              </div>
+            </div>
+          </template>
         </section>
       </main>
 
@@ -134,27 +100,54 @@
         <p class="footer__txt">&#169; 2020 Mesto Russia</p>
       </footer>
 
-      <div class="popup">
+      <div class="popup" id="profile-edit">
+        <div class="popup__container">
+          <img class="popup__close" src="images/Close_Icon.svg" alt="закрыть выпадающее окно" />
+          <form class="popup__form" name="popup_send">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input type="text" class="popup__input popup__input_type_name" name="input_name" />
+            <input type="text" class="popup__input popup__input_type_job" name="input_job" />
+            <button class="popup__save" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup" id="create">
         <div class="popup__container">
           <img
             class="popup__close"
             src="images/Close_Icon.svg"
             alt="закрыть выпадающее окно"
+            id="popup-create_close"
           />
-          <form class="popup__form" name="popup_send">
-            <h2 class="popup__title">Редактировать профиль</h2>
+          <form class="popup__form" name="popup_create" id="popup-create">
+            <h2 class="popup__title">Новое место</h2>
             <input
               type="text"
-              class="popup__input popup__input_type_name"
+              class="popup__input popup__input_type_placename"
               name="input_name"
+              placeholder="Название"
+              id="input-place"
             />
             <input
               type="text"
-              class="popup__input popup__input_type_job"
+              class="popup__input popup__input_type_link"
               name="input_job"
+              placeholder="Ссылка на картинку"
+              id="input-link"
             />
-            <button class="popup__save" type="submit">Сохранить</button>
+            <button class="popup__save" id="popup-btn_create" type="submit">Создать</button>
           </form>
+        </div>
+      </div>
+      <!-- открытие картинки по клику -->
+      <div class="modal">
+        <div class="modal__body">
+          <div class="modal__content">
+            <img class="modal__close" src="images/Close_Icon.svg" alt="закрыть выпадающее окно" />          
+            <img class="modal__img" id="myImg"/>
+            <p class="modal__caption"></p>
+          </div>
         </div>
       </div>
     </div>
